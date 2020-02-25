@@ -28,9 +28,9 @@ craps_map <- function(n) {
   map_int(1:n, ~ craps())
 }
 
-plot_craps <- craps_map(100000) %>%
+plot_craps <- craps_map(200000) %>%
   as.data.frame() 
 
 ggplot(plot_craps, aes(.)) +
-  geom_histogram()
+  geom_bar()
 ```
